@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meddlesome Company</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/project.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="nav-home-link">Jillian Li</a>
+            <a href="index.html#projects" class="nav-projects-link">Projects</a>
+            <a href="about.html" class="nav-about-link">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <img class="title-image" srcset="img/MC/MC-320.webp 320w, img/MC/MC-640.webp 640w, img/MC/MC-1280.webp 1280w, img/MC/MC-1920.webp 1920w, img/MC/MC-2240.webp 2240w, img/MC/MC-2560.webp 2560w" src="img/MC/MC-320.webp" width="2560" height="1440" alt="A computer game start screen, with the title and buttons in the middle, and two characters" loading="lazy">
+
+        <div class="pattern">
+            <img src="img/pattern-left.svg" width="900" height="1200" alt="a cluster of overlapping pink rectangles in the top left corner of the background" class="pattern-left" loading="lazy">
+            <img src="img/pattern-right.svg" width="900" height="1200" alt="a cluster of overlapping pink rectangles in the top right corner of the background" class="pattern-right" loading="lazy">
+            <section class="content">
+                <h1>Meddlesome Company</h1>
+                <section class="project-info">
+                    <div>
+                        <h2 class="info-heading">Role</h2>
+                        <ul class="info-list">
+                            <li>Game Developer</li>
+                            <li>Game Designer</li>
+                            <li>Map & Puzzle/UI Layout Designer</li>
+                            <li>Puzzle/UI Artist</li>
+                            <li>Original Script Writer</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="info-heading">Team</h2>
+                        <ul class="info-list">
+                            <li>Michelle Lin – Game Developer, Game Designer, Environment Artist, Original Script Writer</li>
+                            <li>Angela Shen – Character Artist, Script Editor</li>
+                            <li>Keith Law – Puzzle/UI Artist, Environment Artist, Script Editor</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="info-heading">Tools</h2>
+                        <ul class="info-list">
+                            <li>Unity & C#</li>
+                            <li>Visual Studio Code</li>
+                            <li>Figma</li>
+                            <li>Aseprite</li>
+                            <li>Google Docs</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="info-heading">Context</h2>
+                        <p>Final project for Narrative and New Media course at SFU, October – December 2024.</p>
+                        <p>The purpose of this project was to adapt a script from the course's previous project into an interactive medium. My team chose to create a 2D game.</p>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h2>Overview</h2>
+                    <p><strong>Meddlesome Company</strong> is a narrative-driven 2D side-scroller game adapted from the script I wrote with Michelle for the first project in this course. The purpose of that project was to write an engaging story that hit certain narrative beats, in the form of a script intended as a 30 minute film.</p>
+                    <p>Our story premise is about two high-achieving employees, Anthony and Theo, who work for a large technological company called Berry Inc. Their CEO sends them as a team to infiltrate the rival company, Melon Corp, to steal a new prototype. Unfortunately, they both missed the part about being sent with a teammate, and each believe themselves to be on a solo mission.</p>
+                </section>
+                
+                <section class="content-section">
+                    <h2>Process</h2>
+                    <section class="process-section">
+                        <h3>Adapting the Medium</h3>
+                        <div>
+                            <p>The original script, being intended for a film, had Anthony as the central character and Theo as the deuteragonist, with both sides of the story were shown simultaneously by switching between their perspectives. This would be much more difficult to implement in a game, so we decided to split the story into three chapters: Anthony's perspective up to a certain point; Theo's perspective up to the same point; and a finale chapter going to the end of the story. Anthony's and Theo's chapters can be played in any order, but the finale must be played last. This would allow the player to experience each protagonist's side of the story in a more authentic way.</p>
+                        </div>
+                    </section>
+                    <section class="process-section">
+                        <div>
+                            <h3 class="process-heading">Narrative & Interaction Design</h3>
+                        </div>
+                        <div>
+                            <p>As the focus of the course and project were on narrative, we designed the game interactions to match the characters' actions and experiences in the story. A large part of the story is Anthony's and Theo's actions bringing consequences for each other and themselves, so I wanted the player to participate in making these mistakes and share some of the protagonists' feelings.</p>
+                            <p>For example, early in the story, Anthony's overconfidence causes him to make a mistake when using a new software to update a database, and he has to fix it later on. For the first part, I made the interaction a simple drag and drop where the player drags coloured shapes into the matching coloured slots.</p>
+                            <figure>
+                                <video width="1920" height="1200" controls preload="metadata">
+                                    <source src="img/MC/MC-dragndrop1.mp4" type="video/mp4">
+                                </video>
+                                <figcaption>The first drag and drop.</figcaption>
+                            </figure>
+                            <p>The interaction for fixing the database is almost exactly the same, but with an added a toggle that displays silhouettes of the shapes in the slots, and the player drags the objects based on the shape rather than the colour. This shows the simple mistake Anthony made the first time, and gives the player a sense of responsibility as they had participated in making the mistake.</p>
+                            <figure>
+                                <video width="1920" height="1200" controls preload="metadata">
+                                    <source src="img/MC/MC-dragndrop2.mp4" type="video/mp4">
+                                </video>
+                                <figcaption>The second drag and drop.</figcaption>
+                            </figure>
+                            <p>We also wanted to design more complex and interesting interactions to keep players engaged, and faced the challenge of balancing the inclusion of these with the limited time we would have to develop and implement them. Our approach to this was to brainstorm ideas for interactions, simplify them as much as we could without losing their appeal, and judge how doable they were based on our skill with Unity and what other areas we would need to learn. We then moved forward with the ideas that we thought we could implement in the time frame with little trouble.</p>
+                        </div>
+                    </section>
+                    <section class="process-section">
+                        <div>
+                            <h3 class="process-heading">Layout Design</h3>
+                        </div>
+                        <div>
+                            <p>In a shared Figma file, I designed the basic layouts of all the rooms in the map. This included deciding what rooms we needed, what important objects needed to be present in each room based on the gameplay interactions there, and where the objects would be located in the room.</p>
+                            <figure>
+                                <img srcset="img/MC/MC-layouts-266.webp 266w, img/MC/MC-layouts-532.webp 532w, img/MC/MC-layouts-798.webp 798w, img/MC/MC-layouts-1064.webp 1064w" src="img/MC/MC-layouts-266.webp" width="1064" height="1386" alt="A screenshot of some map layouts" loading="lazy">
+                                <figcaption>A screenshot of some of the map layouts I made in Figma. Anthony's sprite was used as reference for size.</figcaption>
+                            </figure>
+                            <p>In addition to the layout of objects within each room, I also had to consider how the rooms would be connected, where to place the doors that led to other rooms, and how intuitive it would be for players to make their way around the map. I did my best to keep the continuity of movement direction—for example, if a player was likely moving to the right when entering a room, they would keep moving right to go further into the room, and left to go back to the door to exit.</p>
+                        </div>
+                    </section>
+                    <section class="process-section">
+                        <div>
+                            <h3 class="process-heading">Development</h3>
+                        </div>
+                        <div>
+                            <p>In the game development, I programmed the player movement and controls during gameplay. This includes the finale chapter, where the player can swap between controlling the two protagonists, with some interactions being unique to the character.</p>
+                            <figure>
+                                <video width="1920" height="1080" controls preload="metadata">
+                                    <source src="img/MC/MC-swap.mp4" type="video/mp4">
+                                </video>
+                                <figcaption>Switching between Anthony and Theo in the finale chapter.</figcaption>
+                            </figure>
+                            <p>I also implemented various mechanics and interactions, including but not limited to: the shooting and blocking when hacking into the vault door in each chapter, the chase sequences where the player runs from a guard and jumps over NPCs, cutting wires of a power box in the correct order, and sneaking through a hall by luring and hiding from guards.</p>
+                            <figure>
+                                <video width="1920" height="1200" controls preload="metadata">
+                                    <source src="img/MC/MC-chase.mp4" type="video/mp4">
+                                </video>
+                                <figcaption>A chase sequence in Theo's chapter.</figcaption>
+                            </figure>
+                            <figure>
+                                <video width="1920" height="1200" controls preload="metadata">
+                                    <source src="img/MC/MC-sneak.mp4" type="video/mp4">
+                                </video>
+                                <figcaption>Sneaking past guards in the finale chapter.</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="content-section">
+                    <h2>Final Game</h2>
+                    <iframe class="video-embed" src="https://www.youtube.com/embed/6u-HBVaYn98" title="Meddlesome Company game walkthrough" width="1920" height="1080" allowfullscreen loading="lazy"></iframe>
+                    <p>Here is a <a href="https://www.youtube.com/watch?v=6u-HBVaYn98">link to the video</a> if the embedded one doesn't load.</p>
+                    <p>Play the game on <a href="https://jyl7hf.itch.io/meddlesome-company">itch.io</a>!</p>
+                </section>
+
+                <section class="content-section">
+                    <h2>Reflection</h2>
+                    <p>Through working on this project, I improved my skill in Unity development. I gained experience in using features of the engine that were previously unfamiliar to me, as well as in designing narrative, interactions, and map layouts in video games.</p>
+                    <p>My team knew from the beginning of the project that our scope was large and would require a lot of work, especially given the limited time we had. Although there were a few features that we were ultimately unable to implement, I am extremely proud of how the game turned out. It was one of the most popular projects at our class's showcase, and seeing others enjoy our game fueled my passion in creating games even more.</p>
+                </section>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-pattern"></div>
+        <div class="footer-main">
+            <p>© 2025. Designed and coded by Jillian Li.</p>
+        </div>
+    </footer>
+
+    <script src="js/navbar-hide.js"></script>
+</body>
+</html>

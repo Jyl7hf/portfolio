@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Animals in a Trench Coat</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/project.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="nav-home-link">Jillian Li</a>
+            <a href="index.html#projects" class="nav-projects-link">Projects</a>
+            <a href="about.html" class="nav-about-link">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <img class="title-image" srcset="img/3ATC/3ATC-320.webp 320w, img/3ATC/3ATC-640.webp 640w, img/3ATC/3ATC-1280.webp 1280w, img/3ATC/3ATC-1920.webp 1920w, img/3ATC/3ATC-2240.webp 2240w, img/3ATC/3ATC-2560.webp 2560w" src="img/3ATC/3ATC-320.webp" width="2560" height="1440" alt="A computer game start screen, with characters on the left, and the title and buttons on the right" loading="lazy">
+
+        <div class="pattern">
+            <img src="img/pattern-left.svg" width="900" height="1200" alt="a cluster of overlapping pink rectangles in the top left corner of the background" class="pattern-left" loading="lazy">
+            <img src="img/pattern-right.svg" width="900" height="1200" alt="a cluster of overlapping pink rectangles in the top right corner of the background" class="pattern-right" loading="lazy">
+            <section class="content">
+                <h1>3 Animals in a Trench Coat</h1>
+                <section class="project-info">
+                    <div>
+                        <h2 class="info-heading">Role</h2>
+                        <ul class="info-list">
+                            <li>Game Developer</li>
+                            <li>Game Designer</li>
+                            <li>Level Designer</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="info-heading">Team</h2>
+                        <ul class="info-list">
+                            <li>Michelle Lin – Environment Artist, Game Designer, Level Designer</li>
+                            <li>Jenise Cheung – Character Artist, Game Designer, Level Designer</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="info-heading">Tools</h2>
+                        <ul class="info-list">
+                            <li>Unity & C#</li>
+                            <li>Visual Studio Code</li>
+                            <li>FigJam</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="info-heading">Context</h2>
+                        <p>Semester-long project for Advanced Game Design course at SFU, January – April 2024.</p>
+                        <p>The purpose of this project was to design and develop a fun and engaging original game with rich gameplay elements. My team chose to create a puzzle game.</p>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h2>Overview</h2>
+                    <p><strong>3 Animals in a Trench Coat</strong> is a 2D top-down puzzle adventure game about a parrot, a monkey, and a dog who disguise themselves as a human and accidentally join a spy organization. Controlling the three animals, the player must use their different abilities to solve puzzles and complete missions without revealing their true identities.</p>
+                </section>
+                
+                <section class="content-section">
+                    <h2>Process</h2>
+                    <section class="process-section">
+                        <h3>Core Game Design</h3>
+                        <div>
+                            <p>After the initial idea of the main character actually being three animals stacked on top of each other in a trench coat—with each animal having unique abilities—we decided that the animals should be able to separate from the stack. I considered different possibilities for how the player would control and separate them, and decided that switching between them to access their abilities would be best. To add more humour and stakes to the gameplay, I suggested that the disguise would only fool NPCs if all three animals are in the trench coat. As soon as one of them leaves the stack, the disguise is rendered ineffective.</p>
+                        </div>
+                    </section>
+                    <section class="process-section">
+                        <div>
+                            <h3 class="process-heading">Level Design</h3>
+                        </div>
+                        <div>
+                            <p>To design the specific levels and puzzles, as well as the details and flow of the story, we collaborated in a FigJam file. Here we would brainstorm and visualize ideas, using sticky notes and stickers to visually communicate them to each other.</p>
+                            <figure>
+                                <img srcset="img/3ATC/3ATC-figjam-345.webp 345w, img/3ATC/3ATC-figjam-691.webp 691w, img/3ATC/3ATC-figjam-1036.webp 1036w, img/3ATC/3ATC-figjam-1382.webp 1382w, img/3ATC/3ATC-figjam-1727.webp 1727w" src="img/3ATC/3ATC-figjam-345.webp" width="1727" height="1196" alt="A screenshot of a map layout" loading="lazy">
+                                <figcaption>A screenshot of one of our level designs in FigJam.</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+                    <section class="process-section">
+                        <div>
+                            <h3 class="process-heading">Development</h3>
+                        </div>
+                        <div>
+                            <p>My main contribution to the project was developing the game in Unity. The core mechanic of the game is that the player switches between the animals to select which one to control, and can split one off from the stack to move separately.</p>
+                            <div class="two-figures">
+                                <figure>
+                                    <!-- referenced https://www.w3schools.com/html/html5_video.asp
+                                    and https://www.w3schools.com/tags/tag_video.asp for video -->
+                                    <video width="526" height="408" controls preload="metadata">
+                                        <source src="img/3ATC/3ATC-switch.mp4" type="video/mp4">
+                                    </video>
+                                    <figcaption>Switching between the animals in the stack. Video clip from final game.</figcaption>
+                                </figure>
+                                <figure>
+                                    <video width="526" height="408" controls preload="metadata">
+                                        <source src="img/3ATC/3ATC-split.mp4" type="video/mp4">
+                                    </video>
+                                    <figcaption>Splitting an animal from the stack. Video clip from final game.</figcaption>
+                                </figure>
+                            </div>
+                            <p>This was the first mechanic I had to prototype for our game.</p>
+                            <p>To start, I simplified the task by focusing on switching between the three animals within the full trench coat stack (as in, none of them separated from it). First, I tried having a separate object for each animal being selected, and when the player switched characters, the first animal's object would be hidden and the second would appear in its place. However, I soon found that when a hidden object was made active again, it can briefly be seen in its original position before teleporting to the new location, and after trying multiple ways to fix this issue, I decided to change the basic structure of the mechanic's implementation.</p>
+                            <figure>
+                                <video width="1280" height="720" controls preload="metadata">
+                                    <source src="img/3ATC/3ATC-switching-issue.mp4" type="video/mp4">
+                                </video>
+                                <figcaption>The teleportation issue when using different objects in character switching, recreated in Figma.</figcaption>
+                            </figure>
+                            <p>I changed my approach to have one object for the trench coat stack and to change the sprite when a different animal was selected, with a variable in the script holding the value of the current animal. When this method worked without problems, I started implementing the splitting mechanic using the same principle of having one object with three sprites for the stack of two animals, and had a separate object for each individual animal.</p>
+                            <figure>
+                                <video width="854" height="480" controls preload="metadata">
+                                    <source src="img/3ATC/3ATC-prototype-splitting.mp4" type="video/mp4">
+                                </video>
+                                <figcaption>The first prototype of switching and splitting.</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="content-section">
+                    <h2>Final Game</h2>
+                    <!-- referenced https://stackoverflow.com/questions/61018479/how-do-i-embed-a-vimeo-video-in-html for Vimeo embed -->
+                    <iframe class="video-embed" src="https://player.vimeo.com/video/936878864" title="3 Animals in a Trench Coat game trailer" width="1920" height="1080" allowfullscreen loading="lazy"></iframe>
+                    <p>Here is a <a href="https://vimeo.com/936878864">link to the video</a> if the embedded one doesn't load.</p>
+                    <p>Play the game on <a href="https://jyl7hf.itch.io/3-animals-in-a-trench-coat">itch.io</a>!</p>
+                </section>
+
+                <section class="content-section">
+                    <h2>Reflection</h2>
+                    <p>As I had no prior experience with game engines, I had to learn how to use Unity to develop our game almost entirely on my own, which was an intimidating thought. To make it more manageable, I simplified the task by splitting it into smaller pieces, which I would focus on one at a time based on importance and difficulty. An example of this is how I built the main mechanic, by first focusing on the most basic aspect—switching between animals—before moving onto the next part—the splitting. By the end of the project, I had gained not only experience in using Unity, but also more confidence in my programming and self learning abilities.</p>
+                </section>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-pattern"></div>
+        <div class="footer-main">
+            <p>© 2025. Designed and coded by Jillian Li.</p>
+        </div>
+    </footer>
+
+    <script src="js/navbar-hide.js"></script>
+</body>
+</html>

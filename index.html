@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="nav-home-link">Jillian Li</a>
+            <a href="index.html#projects" class="nav-projects-link">Projects</a>
+            <a href="about.html" class="nav-about-link">About</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="banner">
+            <picture>
+                <!-- referenced https://stackoverflow.com/questions/12464101/svg-stretching-an-image for stretching svg -->
+				<source srcset="img/banner-desktop.svg" media="(min-width: 35rem)">
+				<img class="banner-image" srcset="img/banner-mobile.svg" src="img/banner-mobile.svg" alt="a background of overlapping pink rectangles" loading="lazy">
+			</picture>
+            <div class="banner-text">
+                <h1>Hi, I'm Jillian</h1>
+                <p class="subtitle">An aspiring game designer with a love for coding and creating new interactive experiences.</p>
+                <a href="#projects" class="link-button">View my projects ↴</a>
+            </div>
+        </section>
+
+        <section id="projects" class="content">
+            <h2>Here are some of my projects</h2>
+            <ul class="project-grid">
+                <li><a href="meddlesome-company.html" class="project-card">
+                    <img srcset="img/MC/MC-320.webp 320w, img/MC/MC-640.webp 640w, img/MC/MC-1280.webp 1280w, img/MC/MC-1920.webp 1920w" src="img/MC/MC-640.webp" width="640" height="360" alt="" class="project-image" loading="lazy">
+                    <h3 class="project-name">Meddlesome Company</h3>
+                    <p class="project-tags">Game Design & Development, Narrative Design, Unity & C#</p>
+                </a></li>
+                <li><a href="3-animals-in-a-trench-coat.html" class="project-card">
+                    <img srcset="img/3ATC/3ATC-320.webp 320w, img/3ATC/3ATC-640.webp 640w, img/3ATC/3ATC-1280.webp 1280w, img/3ATC/3ATC-1920.webp 1920w" src="img/3ATC/3ATC-640.webp" width="640" height="360" alt="" class="project-image" loading="lazy">
+                    <h3 class="project-name">3 Animals in a Trench Coat</h3>
+                    <p class="project-tags">Game Design & Development, Unity & C#</p>
+                </a></li>
+                <li><a href="3-animals-in-a-trench-coat.html" class="project-card">
+                    <img src="img/3ATC/3ATC-640.webp" width="640" height="360" alt="" class="project-image">
+                    <h3 class="project-name">Second project placeholder</h3>
+                    <p class="project-tags">This is just here so I can see the grid</p>
+                </a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-pattern"></div>
+        <div class="footer-main">
+            <p>© 2025. Designed and coded by Jillian Li.</p>
+        </div>
+    </footer>
+
+    <script src="js/navbar-hide.js"></script>
+</body>
+</html>

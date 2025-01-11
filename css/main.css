@@ -1,0 +1,339 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    color: #333333;
+}
+
+.content {
+    max-width: 80rem;
+    margin: 0 2rem;
+}
+
+@media (min-width: 50rem) {
+    .content {
+        margin: 0 5rem;
+    }
+}
+
+@media (min-width: 90rem) {
+    .content {
+        margin: 0 auto;
+    }
+}
+
+h1, h2, h3, h4 {
+    font-family: "Montserrat", sans-serif;
+    color: #8B0A57;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+
+    font-size: 3rem;
+}
+
+nav {
+    display: grid;
+    column-gap: 3rem;
+    row-gap: 1rem;
+    padding: 1.5rem 5rem;
+    /* box shadow code referenced from https://www.w3schools.com/css/css3_images.asp
+    and https://www.w3schools.com/cssref/css3_pr_box-shadow.php */
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    z-index: 1;
+    transition: top 0.2s;
+}
+
+nav a {
+    font-family: "Montserrat", sans-serif;
+    color: #8B0A57;
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0 0.2rem;
+
+    position: relative;
+    font-weight: bold;
+}
+
+/* referenced https://codepen.io/andrewhaw/pen/BagjZbZ/38c795e10b5de1f616faa5bfda046290?editors=1100
+and https://medium.com/front-end-weekly/highlighter-effect-with-css-e8131d260db9 for highlight effect */
+nav a::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+	left: 0;
+	right: 0;
+	bottom: 5%;
+	z-index: -1;
+    background-color: #F9E6F1;
+    width: 0;
+    transition-duration: 0.2s;
+}
+
+nav a:hover::after, nav a:focus::after {
+    width: 100%;
+}
+
+.nav-home-link {
+    font-weight: 900;
+}
+
+p {
+    /* max-width: 40rem; */
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333333;
+}
+
+p a {
+    color: #8B0A57;
+    position: relative;
+}
+
+p a:hover, p a:focus {
+    text-decoration: none;
+}
+
+p a::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+    background-color: #F9E6F1;
+    width: 0;
+    transition-duration: 0.15s;
+}
+
+p a:hover::after, p a:focus::after {
+    width: 100%;
+}
+
+li {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    margin-top: 8rem;
+}
+
+.footer-pattern {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 8rem;
+    /* referenced https://www.youtube.com/watch?v=_oFWg_NlKdo
+    https://www.w3schools.com/css/css_background_repeat.asp and
+    https://www.w3schools.com/cssref/css3_pr_background-size.php for background image */
+    background-image: url(../img/footer-pattern.svg);
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    background-position: center;
+}
+
+.footer-main {
+    background-color: #8B0A57;
+    margin: 0;
+    padding: 3rem;
+}
+
+.footer-main p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    text-align: center;
+    margin: auto;
+    color: #FFFFFF;
+}
+
+figure {
+    margin: 2rem 0;
+}
+
+figcaption {
+    font-style: italic;
+    color: #666666;
+    margin-top: 0.5rem;
+}
+
+/* button code referenced from https://csswolf.com/how-to-make-a-realistic-button-press-effect-in-css/ */
+.link-button {
+    display: inline-block;
+    margin-top: 2rem;
+    color: #8B0A57;
+    background-color: #ffffff;
+    font-size: 1.2rem;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    border: 0.15rem solid;
+    transition-property: transform, box-shadow;
+    transition-duration: 0.2s;
+}
+
+.link-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+    background-color: #F9E6F1;
+    width: 0;
+    transition-duration: 0.2s;
+}
+
+.link-button:hover, .link-button:focus {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.3rem #8B0A57;
+}
+
+.link-button:hover::after, .link-button:focus::after {
+    width: 100%;
+}
+
+.link-button:active {
+    transform: translateY(0rem);
+    box-shadow: none;
+}
+
+.project-grid {
+    display: grid;
+    list-style: none;
+    padding-left: 0;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    /* justify-items learned from https://www.digitalocean.com/community/tutorials/css-align-justify */
+    justify-items: center;
+
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-card {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    transition-property: box-shadow, transform;
+    transition-duration: 0.2s;
+
+    justify-items: center;
+}
+
+.project-image {
+    opacity: 0.9;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+}
+
+.project-name {
+    display: inline-block;
+    margin-bottom: 0.8rem;
+    padding: 0 0.5rem;
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.project-tags {
+    text-align: center;
+    margin: 0 auto 3rem auto;
+    color: #666666;
+}
+
+.project-card:hover, .project-card:focus {
+    transform: translateY(-0.3rem);
+    /* box shadow code referenced from https://www.w3schools.com/css/css3_images.asp
+    and https://www.w3schools.com/cssref/css3_pr_box-shadow.php */
+    box-shadow: 0 0.3rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.project-card:hover .project-image, .project-card:focus .project-image {
+    opacity: 1;
+}
+
+.project-name::after {
+    content: "";
+    position: absolute;
+    top: 35%;
+	left: 0;
+	right: 0;
+	bottom: 20%;
+	z-index: -1;
+    background-color: #F9E6F1;
+    width: 0;
+    transition-duration: 0.2s;
+}
+
+.project-card:hover .project-name::after, .project-card:focus .project-name::after {
+    width: 100%;
+}
+
+.project-card:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+@media (min-width: 35rem) {
+    nav {
+        /* grid column values learned from https://www.w3schools.com/cssref/pr_grid-template-columns.php */
+        grid-template-columns: max-content auto max-content max-content;
+    }
+
+    /* grid column start and end learned from
+    https://thevalleyofcode.com/css-grid/4-spawning-items-on-multiple-columns-andor-rows */
+    .nav-projects-link {
+        grid-column: 3 / 4;
+    }
+    .nav-about-link {
+        grid-column: 4 / 5;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .project-name {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 65rem) {
+    .project-grid {
+        grid-template-columns: 1fr 1fr;
+        max-width: 100%;
+    }
+
+    .footer-pattern {
+        background-image: url(../img/footer-pattern-wide.svg);
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+}
