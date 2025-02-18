@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystic Walker</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.svg">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/project.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="nav-home-link">Jillian Li</a>
+            <a href="index.html#projects" class="nav-projects-link">Projects</a>
+            <a href="about.html" class="nav-about-link">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <img class="title-image" srcset="img/MW/MW-320.webp 320w, img/MW/MW-640.webp 640w, img/MW/MW-1280.webp 1280w, img/MW/MW-1920.webp 1920w, img/MW/MW-2240.webp 2240w, img/MW/MW-2560.webp 2560w" src="img/MW/MW-320.webp" width="2560" height="1440" alt="A set of mobile app mockups" loading="lazy">
+
+        <div class="pattern">
+            <img src="img/pattern-left.svg" width="900" height="1200" alt="a cluster of overlapping pink rectangles in the top left corner of the background" class="pattern-left" loading="lazy">
+            <img src="img/pattern-right.svg" width="900" height="1200" alt="a cluster of overlapping pink rectangles in the top right corner of the background" class="pattern-right" loading="lazy">
+            <section class="content">
+                <h1>Mystic Walker</h1>
+                <section class="project-info">
+                    <div>
+                        <h2 class="info-heading">Role</h2>
+                        <ul class="info-list">
+                            <li>Developer</li>
+                            <li>App Designer</li>
+                            <li>UI Designer</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="info-heading">Team</h2>
+                        <ul class="info-list">
+                            <li>Jenise Cheung – Artist, App Designer, UI Designer</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="info-heading">Tools</h2>
+                        <ul class="info-list">
+                            <li>Android Studio</li>
+                            <li>Java</li>
+                            <li>XML</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="info-heading">Context</h2>
+                        <p>Final project for Mobile Computing course at SFU, October – December 2023.</p>
+                        <p>The purpose of this project was to design and develop a mobile app with rich interactions using Android Studio.</p>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h2>Overview</h2>
+                    <p><strong>Mystic Walker</strong> is a creature collection and pet simulation app that aims to motivate users to spend more time outdoors. The user sets a timer to take a walk, and when the timer runs out, they take a photo with their camera to reveal a creature that they can name and collect. The user can interact with their creatures or exchange them for XP, which unlocks accessories for collected creatures to wear.</p>
+                </section>
+                
+                <section class="content-section">
+                    <h2>Process</h2>
+                    <section class="process-section">
+                        <div>
+                            <h3 class="process-heading">Design</h3>
+                        </div>
+                        <div>
+                            <p>The concept came from the fact that we wanted our app to be both useful and fun. After we had decided to use this idea, we started planning out the app's functionalities and structure, as well as a rough timeline for the project, in a proposal document.</p>
+                            <figure>
+                                <img src="img/MW/MW-appstructure-1000.webp" width="500" height="450" alt="A screenshot of a document describing the app's main and sub pages" loading="lazy">
+                                <figcaption>A screenshot of the app structure details from our proposal document.</figcaption>
+                            </figure>
+                            <p>The creature that appears at the end of a walk depends on the light and temperature of the environment, as well as the length of the set timer. Originally, we had planned to use sensors to obtain temperature data, but after we submitted our proposal, we found that our devices did not have temperature sensors. We then changed our app design to access the GPS location data and use it to obtain weather data from a web service.</p>
+                            <p>After planning out all the features of the app, I made sketches of the user interface for each page and functionality.</p>
+                            <figure>
+                                <img srcset="img/MW/MW-sketches1-400.webp 400w, img/MW/MW-sketches1-600.webp 600w, img/MW/MW-sketches1-800.webp 800w" src="img/MW/MW-sketches1-400.webp" width="400" height="640" alt="Four sketches of UI layouts for setting a timer and collecting a creature" loading="lazy">
+                                <figcaption>The sketches I drew for the home page and its subpages.</figcaption>
+                            </figure>
+                            <figure>
+                                <img srcset="img/MW/MW-sketches2-400.webp 400w, img/MW/MW-sketches2-600.webp 600w, img/MW/MW-sketches2-800.webp 800w" src="img/MW/MW-sketches2-400.webp" width="400" height="640" alt="Four sketches of UI layouts for the app's creature pages" loading="lazy">
+                                <figcaption>The sketches I drew for the creature pages.</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+                    <section class="process-section">
+                        <div>
+                            <h3 class="process-heading">Development</h3>
+                        </div>
+                        <div>
+                            <p>I did all of the development in Android Studio and tested the app by running it on my Android phone, and I would regularly send new versions of the project to my partner for her to test on her device as well. In the last few weeks, I also had access to two more phones I could use to test with.</p>
+                            <figure>
+                                <img srcset="img/MW/MW-devicetesting-320.webp 320w, img/MW/MW-devicetesting-640.webp 640w, img/MW/MW-devicetesting-1280.webp 1280w, img/MW/MW-devicetesting-1920.webp 1920w" src="img/MW/MW-devicetesting-320.webp" width="1920" height="1340" alt="Three screenshots of the creature collection page on different devices" loading="lazy">
+                                <figcaption>Screenshots from testing the app on multiple devices.</figcaption>
+                            </figure>
+                            <p>The greatest challenge I faced presented itself when I was programming the retrieval of weather data from the web service. The issue was that the feature worked fine on my phone and on the emulator in Android Studio, but it would not work on my partner's phone.</p>
+                            <p>My first approach to the problem was to thoroughly check through the code to figure out where it went wrong. However, even after identifying which line the problem occurred in, none of my revision attempts resolved the issue, and researching it online yielded no results.</p>
+                            <p>I then decided to look at the problem differently: since the function worked on one device but not the other, perhaps the issue was related to the device rather than the code. After some consideration, I realized that the phone the function worked on used Android 8 while the other was on Android 13. Researching the subject, I found that Android 9 and later versions restrict HTTP requests, and the solution was to add a line in the Android Manifest file to allow it.</p>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="content-section">
+                    <h2>Final App</h2>
+                    <iframe class="video-embed" src="https://www.youtube.com/embed/V9rXAG-t8Vg" title="Mystic Walker app demo" width="1920" height="1080" allowfullscreen loading="lazy"></iframe>
+                    <p>Here is a <a href="https://www.youtube.com/watch?v=V9rXAG-t8Vg">link to the video</a> if the embedded one doesn't load.</p>
+                </section>
+
+                <section class="content-section">
+                    <h2>Reflection</h2>
+                    <p>Working on this project made me better understand the importance of testing a digital product, whether it is an application or a website, on multiple different devices. I had thought that the greatest difference between devices would be the layout and elements of the app's user interface. Through facing the challenges in creating this app, I have learned to consider possible restrictions of operating systems and software, and even the possibility of the wrong colour palette being used if the device is in dark mode.</p>
+                    <p>Something I would do differently is to add more variety in the button designs. While I do believe it is important to have a consistent style guide, I think our app could benefit from having a few variations to improve both the aesthetic and intuitiveness of the interface.</p>
+                </section>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-pattern"></div>
+        <div class="footer-main">
+            <p>© 2025. Designed and coded by Jillian Li.</p>
+        </div>
+    </footer>
+
+    <script src="js/navbar-hide.js"></script>
+</body>
+</html>
