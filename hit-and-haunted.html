@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hit & Haunted</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.svg">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/project.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="nav-home-link">Jillian Li</a>
+            <a href="index.html#projects" class="nav-projects-link">Projects</a>
+            <a href="about.html" class="nav-about-link">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <img class="title-image" srcset="img/HnH/HnH-320.webp 320w, img/HnH/HnH-640.webp 640w, img/HnH/HnH-1280.webp 1280w, img/HnH/HnH-1920.webp 1920w" src="img/HnH/HnH-320.webp" width="2560" height="1440" alt="A banner depicting a hitman on the left and a ghost on the right, with the title in the middle" loading="lazy">
+
+        <div class="pattern">
+            <img src="img/pattern-left.svg" width="900" height="1200" alt="a cluster of overlapping pink rectangles in the top left corner of the background" class="pattern-left" loading="lazy">
+            <img src="img/pattern-right.svg" width="900" height="1200" alt="a cluster of overlapping pink rectangles in the top right corner of the background" class="pattern-right" loading="lazy">
+            <section class="content">
+                <h1>Hit & Haunted</h1>
+
+                <section class="overview">
+                    <div>
+                        <p>A 2D top-down murder mystery puzzle adventure game about a hitman, Ace, who is being haunted by the ghost of his most recent victim, Eli. This unlikely duo of murderer and victim must work together to find the anonymous client who ordered the hit, so that Eli can move on to the afterlife and leave Ace alone.</p>
+                        <p>Wishlist the game on <a href="https://store.steampowered.com/app/3574060/Hit__Haunted/">Steam</a>!</p>
+                    </div>
+                </section>
+
+                <section class="project-info">
+                    <div>
+                        <h2 class="info-heading">Role</h2>
+                        <ul class="info-list">
+                            <li>Game Developer</li>
+                            <li>Game Designer</li>
+                            <li>Director</li>
+                            <li>Story Writer</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="info-heading">Team</h2>
+                        <ul class="info-list">
+                            <li>Yuki Cai – Game Artist, Producer, Story Writer</li>
+                            <li>Joshua Ma – Sound Designer, Character Designer, Script Writer, Story Writer</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="info-heading">Tools</h2>
+                        <ul class="info-list">
+                            <li>Unity & C#</li>
+                            <li>Visual Studio Code</li>
+                            <li>FigJam</li>
+                            <li>Google Docs</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="info-heading">Context</h2>
+                        <p>Semester-long project for Senior Project in Creative Media course at SFU, January – April 2025.</p>
+                        <p>The purpose of this project was to create a digital media project that would make a public debut by the end of the course. My team chose to create a game demo that would be published on Steam. We are also continuing to work on the full game after the course is over.</p>
+                    </div>
+                </section>
+                
+                <section class="content-section">
+                    <h2>Process</h2>
+                    <section class="process-section">
+                        <div>
+                            <h3 class="process-heading">Designing Mechanics</h3>
+                        </div>
+                        <div>
+                            <p>When coming up with the concept of a hitman and a ghost working together, the first mechanic I thought of was switching between the two characters to interact with the environment differently. While the hitman could interact with objects and humans in the living world, the ghost would be able to see other ghosts and spiritual energy in the ghost world, as well as phase through walls and possess certain objects.</p>
+                            <figure>
+                                <video width="1920" height="1080" controls preload="metadata">
+                                    <source src="img/HnH/HnH-alleyghost.mp4" type="video/mp4">
+                                </video>
+                                <figcaption>Switching between Ace and Eli to talk to a ghost in the alleyway.</figcaption>
+                            </figure>
+                            <p>After we had pitched three game ideas and decided to move forward with this one, I came up with a transportation and deduction mechanic. The player would unlock new locations in the game world by inputting the location's name or address, proving that they had figured out where they need to go.</p>
+                            <figure>
+                                <video width="1920" height="1080" controls preload="metadata">
+                                    <source src="img/HnH/HnH-transport.mp4" type="video/mp4">
+                                </video>
+                                <figcaption>Inputting a new location in the transport system.</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+                    <section class="process-section">
+                        <div>
+                            <h3 class="process-heading">Development</h3>
+                        </div>
+                        <div>
+                            <p>As the sole developer on the team, I did all the development and programming for the game in Unity and C#.</p>
+                            <p>Ace sees the world normally, while Eli sees it in more blue and muted colours. Additionally, Ace can only see the room he is currently in, while Eli can also see some of the surrounding rooms. I achieved these effects using lights and post processing.</p>
+                            <figure>
+                                <video width="1920" height="1080" controls preload="metadata">
+                                    <source src="img/HnH/HnH-rooms.mp4" type="video/mp4">
+                                </video>
+                                <figcaption>Walking through the rooms in Ace's apartment as both Ace and Eli.</figcaption>
+                            </figure>
+                            <p>Eli can possess certain objects, indicated by a blue outline that appears when the player gets close to it.</p>
+                            <figure>
+                                <video width="1920" height="1080" controls preload="metadata">
+                                    <source src="img/HnH/HnH-possession.mp4" type="video/mp4">
+                                </video>
+                                <figcaption>Possessing a sink at the cafe.</figcaption>
+                            </figure>
+                            <p>We also have an inventory system that keeps track of information about objects that will be used or relevant later on in the game.</p>
+                            <figure>
+                                <video width="1920" height="1080" controls preload="metadata">
+                                    <source src="img/HnH/HnH-inventory.mp4" type="video/mp4">
+                                </video>
+                                <figcaption>The inventory system.</figcaption>
+                            </figure>
+                            <p>A challenge I faced was programming the transport system in a way that would work with the save system. The locations that are available to the player need to be saved so that they can be reloaded from the save file later. The game data is saved in JSON format, and the locations in the transport system use references to game objects in the scene, which could not be saved in a simple file.</p>
+                            <p>I decided to save the names of the available locations as strings, and have an array of all the locations in the scene. When loading data from the save file, the script would find the location object with the matching name and create the correct location button.</p>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="content-section">
+                    <h2>Reflection</h2>
+                    <p>This project was a lot of firsts for me. It is the first game I worked on that would be published on Steam, and the first project I marketed on social media, which added a lot of pressure to make sure there weren't any major bugs or issues that players could run into. This was my first time implementing a save and load system, which brought more complications and possibilities for errors than I had initially anticipated with the implementation of other mechanics and features. It is also the first time I would publish a demo rather than a full game, and my team did not have the time to plan out the details of future plot points and puzzles, so we are not completely sure of exactly how far we want to take it.</p>
+                    <p>Despite the extra stress and uncertainty, I greatly enjoyed creating the game, and we all agreed that we are passionate about it and want to continue development past the scope of the course. I am glad I had this opportunity to improve my skills in game design and development, and I am excited about the future of our game.</p>
+                </section>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-pattern"></div>
+        <div class="footer-main">
+            <p>© 2025. Designed and coded by Jillian Li.</p>
+        </div>
+    </footer>
+
+    <script src="js/navbar-hide.js"></script>
+</body>
+</html>

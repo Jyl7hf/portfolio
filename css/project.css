@@ -45,10 +45,10 @@ h3 {
     margin-bottom: 0.5rem;
 }
 
-/* .overview {
-    display: grid;
-    column-gap: 3rem;
-} */
+.overview {
+    margin: 2rem auto 3rem auto;
+    max-width: 35rem;
+}
 
 .content-section {
     max-width: 60rem;
@@ -141,6 +141,7 @@ img {
 
     h1 {
         font-size: 4rem;
+        /* margin-bottom: 1rem; */
     }
 }
 
@@ -151,6 +152,16 @@ img {
 
     .four-figures {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    /* .overview {
+        grid-template-columns: 2fr 5fr;
+    } */
+}
+
+@media (min-width: 50rem) {
+    .overview {
+        max-width: 50rem;
     }
 }
 
@@ -165,10 +176,6 @@ img {
         grid-template-columns: 1fr 2fr 1fr 2fr;
     }
 
-    /* .overview {
-        grid-template-columns: 1fr 1fr;
-    } */
-
     .two-figures {
         grid-template-columns: 1fr 1fr;
     }
@@ -179,6 +186,7 @@ img {
 
     h1 {
         font-size: 5rem;
+        margin-bottom: 1rem;
     }
 }
 
