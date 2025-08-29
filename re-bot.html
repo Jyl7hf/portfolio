@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re-Bot</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.svg">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/project.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="nav-home-link">Jillian Li</a>
+            <a href="index.html#projects" class="nav-projects-link">Projects</a>
+            <a href="about.html" class="nav-about-link">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <img class="title-image" srcset="img/RB/RB-320.webp 320w, img/RB/RB-640.webp 640w, img/RB/RB-1280.webp 1280w, img/RB/RB-1920.webp 1920w" src="img/RB/RB-320.webp" width="2560" height="1440" alt="A banner of the game's title with a robot jumping on top of it" loading="lazy">
+
+        <div class="pattern">
+            <img src="img/pattern-left.svg" width="900" height="1200" alt="a cluster of overlapping pink rectangles in the top left corner of the background" class="pattern-left" loading="lazy">
+            <img src="img/pattern-right.svg" width="900" height="1200" alt="a cluster of overlapping pink rectangles in the top right corner of the background" class="pattern-right" loading="lazy">
+            <section class="content">
+                <h1>Re-Bot</h1>
+
+                <section class="overview">
+                    <div>
+                        <p>A 2D problem-solving platformer game about a robot whose first second of movement is recorded and played back in a loop for the rest of the level. Some levels also have objects that the player can drag into the room to help the robot reach the door to the next level.</p>
+                        <p>Play the game on <a href="https://jyl7hf.itch.io/re-bot">itch.io</a>!</p>
+                    </div>
+                </section>
+
+                <section class="project-info">
+                    <div>
+                        <h2 class="info-heading">Role</h2>
+                        <ul class="info-list">
+                            <li>Game Developer</li>
+                            <li>Level Designer</li>
+                            <li>Game Designer</li>
+                            <li>Object Artist</li>
+                            <li>Sound Designer</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="info-heading">Team</h2>
+                        <ul class="info-list">
+                            <li>Michelle Lin – Environment Artist, Game Designer, Level Designer</li>
+                            <li>Jenise Cheung – Character Artist, UI Artist, Game Designer</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="info-heading">Tools</h2>
+                        <ul class="info-list">
+                            <li>Unity & C#</li>
+                            <li>Visual Studio Code</li>
+                            <li>FigJam</li>
+                            <li>Aseprite</li>
+                            <li>Google Docs</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="info-heading">Context</h2>
+                        <p>A game made in 4 days for the GMTK Game Jam 2025, which took place from July 30 – August 3, with the theme "Loop".</p>
+                        <p>The submissions were rated in 5 categories, and this jam does not have an "Overall" ranking. Out of 9645 entries to the jam, Re-Bot ranked #650 in Creativity (top 7%), #1150 in Enjoyment (top 12%), and #1615 in Audio (top 17%) from 31 ratings (#1409 and top 15% rating count).</p>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h2>Game Walkthrough</h2>
+                    <iframe class="video-embed" src="https://www.youtube.com/embed/2C5mDr4Qis0" title="Re-Bot game walkthrough" width="1920" height="1080" allowfullscreen loading="lazy"></iframe>
+                    <p>Here is a <a href="https://www.youtube.com/watch?v=2C5mDr4Qis0">link to the video</a> if the embedded one doesn't load.</p>
+                    <p>Play the game on <a href="https://jyl7hf.itch.io/re-bot">itch.io</a>!</p>
+                </section>
+                
+                <section class="content-section">
+                    <h2>Process</h2>
+                    <section class="process-section">
+                        <div>
+                            <h3 class="process-heading">Movement Recording & Playback</h3>
+                        </div>
+                        <div>
+                            <p>The core mechanic of the game is recording one second of the player's movement and replaying it in a loop. This was the first thing I prototyped.</p>
+                            <p>I created a script with methods for the specific actions of the player movement, including horizontal movement and jumping, and used these methods for both the player's controls during the one second of recording and the movement playback. The data on the player's actions, specifically the keys they press and when they press them, was stored in a List.</p>
+                            <figure>
+                                <video width="1920" height="1080" controls preload="metadata">
+                                    <source src="img/RB/RB-recordreplay.mp4" type="video/mp4">
+                                </video>
+                                <figcaption>The first prototype of recording and playing back the player's movements.</figcaption>
+                            </figure>
+                            <p>After creating the first prototype of this mechanic, I noticed that sometimes the first action in the loop is only played during the first iteration of playback, and never again afterward. To approach this problem, I tested the mechanic several times with various different movements to try to find a pattern between the instances when the bug occurred. I realized that this happened if I moved both left and right but didn't release the key during the recording stage, and I was able to solve the issue by stopping the player's horizontal movement at the end of a loop during playback.</p>
+                        </div>
+                    </section>
+                    <section class="process-section">
+                        <div>
+                            <h3 class="process-heading">Dragging Objects</h3>
+                        </div>
+                        <div>
+                            <p>The second mechanic in our game is dragging objects into the level, with the object snapping to the tilemap grid, not colliding with the player until it has been placed, and only being able to be placed in certain tiles (for example, you cannot place an object in a wall). Additionally, an object cannot be dragged before the recording stage ends or after it has been placed.</p>
+                            <p>This game was my first time using tilemaps, so this mechanic was my greatest concern in the development, especially with the placement constraints of the draggable objects.</p>
+                            <p>I looked up tutorials and documentation about tilemap manipulation and movement, and was able to apply the knowledge I learned for my purposes. I converted the object's position to and from the type used for tile positions, and used a separate unrendered tilemap to determine the valid placement positions of the object.</p>
+                            <figure>
+                                <video width="1920" height="1080" controls preload="metadata">
+                                    <source src="img/RB/RB-drag.mp4" type="video/mp4">
+                                </video>
+                                <figcaption>The first prototype of dragging an object into the level.</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="content-section">
+                    <h2>Reflection</h2>
+                    <p>This was my second game jam, and my first one was over twice as long, so the time limit for this one added quite a bit of pressure. Despite this, I really enjoyed making this game and am very happy with how it turned out. Through working on this project, I was able to gain more experience and skills in game development, as well as more confidence in my abilities to both make a game and to do so in a limited amount of time.</p>
+                    <p>Something I would do differently is to playtest the prototype early with a placeholder level. We made the levels quite late on the last day of the jam, so we did not get the chance to playtest with people outside of our team, and we did not see much point in playtesting the game before it had levels. During the jam's rating period, the most common piece of feedback we received was regarding the controls of starting the recording by pressing any key or mouse button, and how some players would accidentally start it when they didn't mean to. From this experience, I learned that playtesting something is always better than not playtesting with other people at all, even if the prototype that is being tested does not have proper levels.</p>
+                </section>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-pattern"></div>
+        <div class="footer-main">
+            <p>© 2025. Designed and coded by Jillian Li.</p>
+        </div>
+    </footer>
+
+    <script src="js/navbar-hide.js"></script>
+</body>
+</html>
